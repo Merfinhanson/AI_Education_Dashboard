@@ -1,0 +1,94 @@
+.file-upload {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  min-height: 320px;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 26px;
+  border: 1px dashed rgba(59, 130, 246, 0.36);
+  border-radius: var(--radius-xl);
+  background:
+    radial-gradient(circle at top right, rgba(59, 130, 246, 0.16), transparent 28%),
+    linear-gradient(180deg, rgba(30, 41, 59, 0.92), rgba(15, 23, 42, 0.98));
+  transition:
+    transform var(--transition),
+    border-color var(--transition);
+}
+
+.file-upload:hover {
+  transform: translateY(-4px);
+  border-color: rgba(59, 130, 246, 0.58);
+}
+
+.file-upload__badge {
+  align-self: flex-start;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(59, 130, 246, 0.14);
+  color: #bfdbfe;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.file-upload__copy h3 {
+  margin: 0 0 10px;
+  font-size: 1.35rem;
+}
+
+.file-upload__copy p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.file-upload__dropzone {
+  display: grid;
+  place-items: center;
+  gap: 12px;
+  padding: 28px 16px;
+  border-radius: 22px;
+  border: 1px dashed rgba(148, 163, 184, 0.28);
+  background: rgba(8, 17, 32, 0.44);
+  text-align: center;
+}
+
+.file-upload__input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.file-upload__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 22px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-strong));
+  color: white;
+  font-weight: 700;
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition);
+  box-shadow: 0 18px 34px rgba(37, 99, 235, 0.28);
+}
+
+.file-upload__button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 22px 40px rgba(37, 99, 235, 0.34);
+}
+
+.file-upload__helper {
+  margin: 0;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.file-upload__accepted {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
