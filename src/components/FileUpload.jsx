@@ -7,6 +7,10 @@ function FileUpload({
   buttonLabel,
   helperText,
   acceptedText,
+  accept,
+  required = false,
+  selectedFileName,
+  onFileSelect,
 }) {
   const inputId = useId();
 
@@ -20,10 +24,20 @@ function FileUpload({
       </div>
 
       <div className="file-upload__dropzone">
-        <input className="file-upload__input" id={inputId} type="file" />
+        <input
+          className="file-upload__input"
+          id={inputId}
+          type="file"
+          accept={accept}
+          required={required}
+          onChange={(event) => onFileSelect?.(event.target.files?.[0] ?? null)}
+        />
         <label className="file-upload__button" htmlFor={inputId}>
           {buttonLabel}
         </label>
+        {selectedFileName ? (
+          <strong className="file-upload__filename">{selectedFileName}</strong>
+        ) : null}
         <p className="file-upload__helper">{helperText}</p>
         <span className="file-upload__accepted">{acceptedText}</span>
       </div>
