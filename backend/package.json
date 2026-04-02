@@ -2,8 +2,8 @@
   "name": "ai-education-platform-backend",
   "private": true,
   "scripts": {
-    "start": "python -m uvicorn app.main:app --reload",
-    "dev": "python -m uvicorn app.main:app --reload",
+    "start": "python -m uvicorn app.main:app --host 127.0.0.1 --port 8000",
+    "dev": "python -m uvicorn app.main:app --reload --host 127.0.0.1 --port 8000",
     "check": "python -m compileall app tests",
     "install:deps": "python -m pip install -r requirements.txt"
   }
