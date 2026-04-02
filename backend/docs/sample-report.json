@@ -1,0 +1,64 @@
+{
+  "submission_id": "4d2e7f46-c2fd-4695-b79f-8f85d2b293c1",
+  "student_name": "Jordan Singh",
+  "student_id": "STD-104",
+  "status": "processed",
+  "created_at": "2026-04-02T09:10:00Z",
+  "question_results": [
+    {
+      "question_number": "1",
+      "question_text": "Explain the process of photosynthesis.",
+      "answer_excerpt": "Photosynthesis is the process by which green plants use sunlight to make food...",
+      "awarded_marks": 4.0,
+      "max_marks": 5.0,
+      "mapped_confidence": 0.97,
+      "evaluation_confidence": 0.84,
+      "strengths": [
+        "Covered 3 of 4 expected rubric points.",
+        "The answer stays reasonably aligned with the expected concepts."
+      ],
+      "weaknesses": [
+        "Some important rubric points are missing or only weakly addressed."
+      ],
+      "missing_key_points": [
+        "role of chlorophyll"
+      ],
+      "ideal_answer_outline": [
+        "definition of photosynthesis",
+        "role of sunlight",
+        "role of chlorophyll",
+        "glucose and oxygen as outputs"
+      ],
+      "justification": "Marks were assigned from rubric coverage, concept alignment, and answer depth."
+    }
+  ],
+  "summary": {
+    "total_marks_obtained": 42.0,
+    "total_marks_possible": 50.0,
+    "percentage": 84.0,
+    "grade": "A",
+    "summary": "The student performed strongly on concept recall and structure but missed some rubric points in long-form answers.",
+    "suggestions": [
+      "role of chlorophyll",
+      "include conclusion for explanation questions"
+    ]
+  },
+  "plagiarism_report": {
+    "is_flagged": true,
+    "matches": [
+      {
+        "matched_submission_id": "8d41feae-d0bd-4705-b257-3807d4e1e290",
+        "matched_student_name": "Aarav Kumar",
+        "text_similarity": 0.94,
+        "structural_similarity": 0.89,
+        "image_similarity": 0.0,
+        "overall_similarity": 0.92,
+        "upload_timestamp": "2026-04-02T08:55:00Z",
+        "copied_sections": [
+          "2",
+          "4"
+        ]
+      }
+    ]
+  }
+}

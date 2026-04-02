@@ -6,6 +6,8 @@
   "scripts": {
     "start": "vite",
     "dev": "vite",
+    "start:frontend": "vite",
+    "start:backend": "npm --prefix backend start",
     "build": "vite build",
     "preview": "vite preview"
   },
