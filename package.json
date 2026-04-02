@@ -9,9 +9,11 @@
     "start:frontend": "vite",
     "start:backend": "npm --prefix backend start",
     "build": "vite build",
+    "build:all": "npm run build && npm --prefix backend run check",
     "preview": "vite preview"
   },
   "dependencies": {
+    "@vercel/speed-insights": "^2.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.26.2"

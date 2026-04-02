@@ -37,6 +37,37 @@ Optional ML providers:
 pip install -r requirements-ml.txt
 ```
 
+## Train a handwriting OCR model
+
+1. Put labeled line crops under `training/handwriting/raw/images/`.
+2. Fill `training/handwriting/manifests/train.jsonl` and `val.jsonl`.
+3. Install ML dependencies:
+
+```bash
+pip install -r requirements-ml.txt
+```
+
+4. Start training:
+
+```bash
+python scripts/train_handwriting.py
+```
+
+Or with npm:
+
+```bash
+npm run install:ml
+npm run train:handwriting
+```
+
+5. The fine-tuned model will be saved to:
+
+```text
+training/handwriting/models/trocr-finetuned/
+```
+
+Once that folder contains a saved Hugging Face TrOCR model, the backend OCR pipeline will automatically load it.
+
 ## Main endpoints
 
 - `GET /api/v1/health`

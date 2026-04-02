@@ -88,6 +88,12 @@
   font-weight: 600;
 }
 
+.file-upload__filename {
+  color: #bfdbfe;
+  font-size: 0.92rem;
+  text-align: center;
+}
+
 .file-upload__accepted {
   color: var(--muted);
   font-size: 0.9rem;

@@ -17,6 +17,12 @@ class Settings(BaseSettings):
     plagiarism_text_threshold: float = 0.92
     plagiarism_structural_threshold: float = 0.85
     evaluation_similarity_threshold: float = 0.62
+    ocr_enable_handwriting_model: bool = True
+    ocr_handwriting_model_dir: str = str(
+        BACKEND_DIR / "training" / "handwriting" / "models" / "trocr-finetuned"
+    )
+    ocr_device: str = "cpu"
+    ocr_max_new_tokens: int = 256
     cors_origins: list[str] = [
         "http://localhost:5173",
         "http://127.0.0.1:5173",
@@ -34,4 +40,5 @@ class Settings(BaseSettings):
 def get_settings() -> Settings:
     settings = Settings()
     Path(settings.storage_dir).mkdir(parents=True, exist_ok=True)
+    Path(settings.ocr_handwriting_model_dir).mkdir(parents=True, exist_ok=True)
     return settings
